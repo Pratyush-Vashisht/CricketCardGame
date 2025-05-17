@@ -21,14 +21,12 @@ public class GameSimulation implements GameProgress{
     public void initGame() {
         System.out.println("Game started!");
         PredefinedCardGenerator predefinedCardGenerator = new PredefinedCardGenerator();
-        List<Card> cards = predefinedCardGenerator.generateCards(Constants.MAX_USERS);
+        List<Card> cards = predefinedCardGenerator.generateCards(Constants.MAX_PLAYER_CARDS);
         // list of cards in deck
         for(Card card : cards) {
             System.out.println(card.toString());
         }
-//        for(int i = 0;i < numberOfUsers; i++) {
-//
-//        }
+
         // Initialize game components, players, and other necessary elements here
         // For example, you can create player objects, set up the game board, etc.
         // You can also implement the logic for the game loop here
