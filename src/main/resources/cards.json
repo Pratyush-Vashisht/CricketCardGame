@@ -1,0 +1,902 @@
+[
+  {
+    "name": "Virat Kohli",
+    "runs": 2906,
+    "matches": 18,
+    "centuries": 38,
+    "fifties": 62,
+    "catches": 22,
+    "wickets": 17
+  },
+  {
+    "name": "Steve Smith",
+    "runs": 1666,
+    "matches": 483,
+    "centuries": 39,
+    "fifties": 69,
+    "catches": 221,
+    "wickets": 81
+  },
+  {
+    "name": "Joe Root",
+    "runs": 2514,
+    "matches": 36,
+    "centuries": 43,
+    "fifties": 94,
+    "catches": 266,
+    "wickets": 116
+  },
+  {
+    "name": "Kane Williamson",
+    "runs": 9880,
+    "matches": 153,
+    "centuries": 18,
+    "fifties": 81,
+    "catches": 38,
+    "wickets": 60
+  },
+  {
+    "name": "Babar Azam",
+    "runs": 6080,
+    "matches": 478,
+    "centuries": 26,
+    "fifties": 88,
+    "catches": 99,
+    "wickets": 14
+  },
+  {
+    "name": "Ben Stokes",
+    "runs": 4077,
+    "matches": 91,
+    "centuries": 19,
+    "fifties": 92,
+    "catches": 76,
+    "wickets": 67
+  },
+  {
+    "name": "Rohit Sharma",
+    "runs": 5795,
+    "matches": 492,
+    "centuries": 21,
+    "fifties": 48,
+    "catches": 22,
+    "wickets": 284
+  },
+  {
+    "name": "David Warner",
+    "runs": 9901,
+    "matches": 275,
+    "centuries": 34,
+    "fifties": 37,
+    "catches": 277,
+    "wickets": 20
+  },
+  {
+    "name": "Faf du Plessis",
+    "runs": 3277,
+    "matches": 270,
+    "centuries": 22,
+    "fifties": 27,
+    "catches": 300,
+    "wickets": 183
+  },
+  {
+    "name": "KL Rahul",
+    "runs": 9305,
+    "matches": 407,
+    "centuries": 1,
+    "fifties": 32,
+    "catches": 78,
+    "wickets": 315
+  },
+  {
+    "name": "Hardik Pandya",
+    "runs": 11698,
+    "matches": 403,
+    "centuries": 0,
+    "fifties": 8,
+    "catches": 240,
+    "wickets": 43
+  },
+  {
+    "name": "Jasprit Bumrah",
+    "runs": 9283,
+    "matches": 186,
+    "centuries": 44,
+    "fifties": 60,
+    "catches": 25,
+    "wickets": 207
+  },
+  {
+    "name": "Trent Boult",
+    "runs": 3531,
+    "matches": 159,
+    "centuries": 21,
+    "fifties": 38,
+    "catches": 261,
+    "wickets": 349
+  },
+  {
+    "name": "Pat Cummins",
+    "runs": 4374,
+    "matches": 362,
+    "centuries": 11,
+    "fifties": 5,
+    "catches": 181,
+    "wickets": 120
+  },
+  {
+    "name": "Shaheen Afridi",
+    "runs": 10898,
+    "matches": 77,
+    "centuries": 3,
+    "fifties": 10,
+    "catches": 199,
+    "wickets": 212
+  },
+  {
+    "name": "Quinton de Kock",
+    "runs": 8468,
+    "matches": 232,
+    "centuries": 31,
+    "fifties": 1,
+    "catches": 45,
+    "wickets": 390
+  },
+  {
+    "name": "Rishabh Pant",
+    "runs": 10286,
+    "matches": 400,
+    "centuries": 9,
+    "fifties": 54,
+    "catches": 133,
+    "wickets": 271
+  },
+  {
+    "name": "Shubman Gill",
+    "runs": 5514,
+    "matches": 333,
+    "centuries": 4,
+    "fifties": 16,
+    "catches": 43,
+    "wickets": 353
+  },
+  {
+    "name": "Mohammed Shami",
+    "runs": 4362,
+    "matches": 319,
+    "centuries": 10,
+    "fifties": 45,
+    "catches": 85,
+    "wickets": 152
+  },
+  {
+    "name": "Ravindra Jadeja",
+    "runs": 1486,
+    "matches": 102,
+    "centuries": 43,
+    "fifties": 59,
+    "catches": 265,
+    "wickets": 25
+  },
+  {
+    "name": "Marnus Labuschagne",
+    "runs": 3160,
+    "matches": 17,
+    "centuries": 21,
+    "fifties": 65,
+    "catches": 200,
+    "wickets": 19
+  },
+  {
+    "name": "Mitchell Starc",
+    "runs": 12547,
+    "matches": 469,
+    "centuries": 42,
+    "fifties": 30,
+    "catches": 209,
+    "wickets": 208
+  },
+  {
+    "name": "Tim Southee",
+    "runs": 995,
+    "matches": 80,
+    "centuries": 11,
+    "fifties": 12,
+    "catches": 3,
+    "wickets": 100
+  },
+  {
+    "name": "Kagiso Rabada",
+    "runs": 14645,
+    "matches": 206,
+    "centuries": 4,
+    "fifties": 65,
+    "catches": 161,
+    "wickets": 46
+  },
+  {
+    "name": "Shakib Al Hasan",
+    "runs": 5864,
+    "matches": 410,
+    "centuries": 30,
+    "fifties": 24,
+    "catches": 219,
+    "wickets": 191
+  },
+  {
+    "name": "Litton Das",
+    "runs": 14626,
+    "matches": 354,
+    "centuries": 14,
+    "fifties": 72,
+    "catches": 114,
+    "wickets": 122
+  },
+  {
+    "name": "Tamim Iqbal",
+    "runs": 11468,
+    "matches": 252,
+    "centuries": 16,
+    "fifties": 35,
+    "catches": 231,
+    "wickets": 81
+  },
+  {
+    "name": "Angelo Mathews",
+    "runs": 12960,
+    "matches": 373,
+    "centuries": 48,
+    "fifties": 83,
+    "catches": 25,
+    "wickets": 284
+  },
+  {
+    "name": "Thisara Perera",
+    "runs": 7470,
+    "matches": 208,
+    "centuries": 25,
+    "fifties": 41,
+    "catches": 7,
+    "wickets": 71
+  },
+  {
+    "name": "Kusal Perera",
+    "runs": 6329,
+    "matches": 190,
+    "centuries": 28,
+    "fifties": 6,
+    "catches": 89,
+    "wickets": 279
+  },
+  {
+    "name": "Jason Holder",
+    "runs": 8726,
+    "matches": 375,
+    "centuries": 41,
+    "fifties": 95,
+    "catches": 98,
+    "wickets": 371
+  },
+  {
+    "name": "Chris Gayle",
+    "runs": 12407,
+    "matches": 190,
+    "centuries": 41,
+    "fifties": 41,
+    "catches": 10,
+    "wickets": 135
+  },
+  {
+    "name": "Andre Russell",
+    "runs": 8646,
+    "matches": 330,
+    "centuries": 34,
+    "fifties": 26,
+    "catches": 88,
+    "wickets": 65
+  },
+  {
+    "name": "Shimron Hetmyer",
+    "runs": 2426,
+    "matches": 89,
+    "centuries": 2,
+    "fifties": 7,
+    "catches": 227,
+    "wickets": 215
+  },
+  {
+    "name": "Nicholas Pooran",
+    "runs": 12925,
+    "matches": 499,
+    "centuries": 4,
+    "fifties": 27,
+    "catches": 269,
+    "wickets": 311
+  },
+  {
+    "name": "Marcus Stoinis",
+    "runs": 2138,
+    "matches": 162,
+    "centuries": 35,
+    "fifties": 25,
+    "catches": 253,
+    "wickets": 234
+  },
+  {
+    "name": "Aaron Finch",
+    "runs": 14349,
+    "matches": 305,
+    "centuries": 41,
+    "fifties": 82,
+    "catches": 297,
+    "wickets": 156
+  },
+  {
+    "name": "Glenn Maxwell",
+    "runs": 7120,
+    "matches": 61,
+    "centuries": 3,
+    "fifties": 12,
+    "catches": 60,
+    "wickets": 216
+  },
+  {
+    "name": "Alex Carey",
+    "runs": 2185,
+    "matches": 275,
+    "centuries": 30,
+    "fifties": 10,
+    "catches": 222,
+    "wickets": 147
+  },
+  {
+    "name": "Josh Hazlewood",
+    "runs": 14023,
+    "matches": 305,
+    "centuries": 13,
+    "fifties": 8,
+    "catches": 96,
+    "wickets": 94
+  },
+  {
+    "name": "Jonny Bairstow",
+    "runs": 885,
+    "matches": 27,
+    "centuries": 42,
+    "fifties": 75,
+    "catches": 186,
+    "wickets": 198
+  },
+  {
+    "name": "Jos Buttler",
+    "runs": 5591,
+    "matches": 459,
+    "centuries": 41,
+    "fifties": 72,
+    "catches": 236,
+    "wickets": 391
+  },
+  {
+    "name": "Adil Rashid",
+    "runs": 14003,
+    "matches": 157,
+    "centuries": 32,
+    "fifties": 95,
+    "catches": 247,
+    "wickets": 170
+  },
+  {
+    "name": "Mark Wood",
+    "runs": 12786,
+    "matches": 359,
+    "centuries": 50,
+    "fifties": 27,
+    "catches": 293,
+    "wickets": 243
+  },
+  {
+    "name": "Jofra Archer",
+    "runs": 4421,
+    "matches": 391,
+    "centuries": 50,
+    "fifties": 72,
+    "catches": 267,
+    "wickets": 92
+  },
+  {
+    "name": "Moeen Ali",
+    "runs": 14229,
+    "matches": 446,
+    "centuries": 34,
+    "fifties": 17,
+    "catches": 169,
+    "wickets": 377
+  },
+  {
+    "name": "Sam Curran",
+    "runs": 7467,
+    "matches": 435,
+    "centuries": 13,
+    "fifties": 12,
+    "catches": 67,
+    "wickets": 298
+  },
+  {
+    "name": "Dawid Malan",
+    "runs": 3301,
+    "matches": 379,
+    "centuries": 49,
+    "fifties": 8,
+    "catches": 136,
+    "wickets": 184
+  },
+  {
+    "name": "Tom Latham",
+    "runs": 202,
+    "matches": 137,
+    "centuries": 11,
+    "fifties": 21,
+    "catches": 115,
+    "wickets": 232
+  },
+  {
+    "name": "Devon Conway",
+    "runs": 327,
+    "matches": 334,
+    "centuries": 39,
+    "fifties": 59,
+    "catches": 124,
+    "wickets": 120
+  },
+  {
+    "name": "Daryl Mitchell",
+    "runs": 9009,
+    "matches": 260,
+    "centuries": 24,
+    "fifties": 61,
+    "catches": 213,
+    "wickets": 265
+  },
+  {
+    "name": "Martin Guptill",
+    "runs": 5783,
+    "matches": 362,
+    "centuries": 28,
+    "fifties": 29,
+    "catches": 186,
+    "wickets": 130
+  },
+  {
+    "name": "Rahmat Shah",
+    "runs": 3998,
+    "matches": 266,
+    "centuries": 23,
+    "fifties": 5,
+    "catches": 9,
+    "wickets": 236
+  },
+  {
+    "name": "Mohammad Nabi",
+    "runs": 8109,
+    "matches": 411,
+    "centuries": 34,
+    "fifties": 30,
+    "catches": 0,
+    "wickets": 384
+  },
+  {
+    "name": "Najibullah Zadran",
+    "runs": 6516,
+    "matches": 217,
+    "centuries": 42,
+    "fifties": 81,
+    "catches": 117,
+    "wickets": 194
+  },
+  {
+    "name": "Mujeeb Ur Rahman",
+    "runs": 10893,
+    "matches": 176,
+    "centuries": 34,
+    "fifties": 11,
+    "catches": 202,
+    "wickets": 279
+  },
+  {
+    "name": "Rashid Khan",
+    "runs": 8994,
+    "matches": 423,
+    "centuries": 50,
+    "fifties": 93,
+    "catches": 49,
+    "wickets": 394
+  },
+  {
+    "name": "Asghar Afghan",
+    "runs": 9396,
+    "matches": 418,
+    "centuries": 16,
+    "fifties": 26,
+    "catches": 166,
+    "wickets": 37
+  },
+  {
+    "name": "Kevin O'Brien",
+    "runs": 928,
+    "matches": 207,
+    "centuries": 30,
+    "fifties": 23,
+    "catches": 297,
+    "wickets": 16
+  },
+  {
+    "name": "Paul Stirling",
+    "runs": 10448,
+    "matches": 180,
+    "centuries": 9,
+    "fifties": 86,
+    "catches": 209,
+    "wickets": 199
+  },
+  {
+    "name": "Andy Balbirnie",
+    "runs": 5945,
+    "matches": 458,
+    "centuries": 50,
+    "fifties": 36,
+    "catches": 2,
+    "wickets": 386
+  },
+  {
+    "name": "George Dockrell",
+    "runs": 13071,
+    "matches": 327,
+    "centuries": 24,
+    "fifties": 58,
+    "catches": 40,
+    "wickets": 342
+  },
+  {
+    "name": "Simi Singh",
+    "runs": 2126,
+    "matches": 20,
+    "centuries": 41,
+    "fifties": 85,
+    "catches": 147,
+    "wickets": 50
+  },
+  {
+    "name": "Craig Ervine",
+    "runs": 3351,
+    "matches": 125,
+    "centuries": 21,
+    "fifties": 32,
+    "catches": 87,
+    "wickets": 197
+  },
+  {
+    "name": "Sikandar Raza",
+    "runs": 14752,
+    "matches": 339,
+    "centuries": 40,
+    "fifties": 21,
+    "catches": 38,
+    "wickets": 309
+  },
+  {
+    "name": "Sean Williams",
+    "runs": 13680,
+    "matches": 219,
+    "centuries": 7,
+    "fifties": 36,
+    "catches": 22,
+    "wickets": 9
+  },
+  {
+    "name": "Ryan Burl",
+    "runs": 5765,
+    "matches": 82,
+    "centuries": 21,
+    "fifties": 39,
+    "catches": 249,
+    "wickets": 186
+  },
+  {
+    "name": "Wesley Madhevere",
+    "runs": 11001,
+    "matches": 183,
+    "centuries": 13,
+    "fifties": 0,
+    "catches": 129,
+    "wickets": 340
+  },
+  {
+    "name": "Kyle Mayers",
+    "runs": 13764,
+    "matches": 404,
+    "centuries": 18,
+    "fifties": 57,
+    "catches": 245,
+    "wickets": 394
+  },
+  {
+    "name": "Brandon King",
+    "runs": 9456,
+    "matches": 408,
+    "centuries": 5,
+    "fifties": 24,
+    "catches": 158,
+    "wickets": 206
+  },
+  {
+    "name": "Obed McCoy",
+    "runs": 187,
+    "matches": 434,
+    "centuries": 36,
+    "fifties": 11,
+    "catches": 176,
+    "wickets": 378
+  },
+  {
+    "name": "Alzarri Joseph",
+    "runs": 336,
+    "matches": 234,
+    "centuries": 27,
+    "fifties": 73,
+    "catches": 66,
+    "wickets": 335
+  },
+  {
+    "name": "Fabian Allen",
+    "runs": 4622,
+    "matches": 178,
+    "centuries": 2,
+    "fifties": 100,
+    "catches": 264,
+    "wickets": 266
+  },
+  {
+    "name": "Roston Chase",
+    "runs": 14029,
+    "matches": 36,
+    "centuries": 5,
+    "fifties": 66,
+    "catches": 50,
+    "wickets": 393
+  },
+  {
+    "name": "Evin Lewis",
+    "runs": 10268,
+    "matches": 451,
+    "centuries": 6,
+    "fifties": 22,
+    "catches": 255,
+    "wickets": 51
+  },
+  {
+    "name": "David Miller",
+    "runs": 14488,
+    "matches": 200,
+    "centuries": 27,
+    "fifties": 41,
+    "catches": 128,
+    "wickets": 399
+  },
+  {
+    "name": "Aiden Markram",
+    "runs": 4579,
+    "matches": 462,
+    "centuries": 17,
+    "fifties": 95,
+    "catches": 48,
+    "wickets": 241
+  },
+  {
+    "name": "Temba Bavuma",
+    "runs": 2826,
+    "matches": 402,
+    "centuries": 49,
+    "fifties": 74,
+    "catches": 297,
+    "wickets": 249
+  },
+  {
+    "name": "Reeza Hendricks",
+    "runs": 6902,
+    "matches": 427,
+    "centuries": 31,
+    "fifties": 39,
+    "catches": 14,
+    "wickets": 215
+  },
+  {
+    "name": "Heinrich Klaasen",
+    "runs": 11360,
+    "matches": 85,
+    "centuries": 18,
+    "fifties": 15,
+    "catches": 232,
+    "wickets": 171
+  },
+  {
+    "name": "Tabraiz Shamsi",
+    "runs": 4925,
+    "matches": 67,
+    "centuries": 48,
+    "fifties": 14,
+    "catches": 78,
+    "wickets": 324
+  },
+  {
+    "name": "Lungi Ngidi",
+    "runs": 5718,
+    "matches": 339,
+    "centuries": 5,
+    "fifties": 86,
+    "catches": 58,
+    "wickets": 246
+  },
+  {
+    "name": "Dinesh Chandimal",
+    "runs": 4161,
+    "matches": 428,
+    "centuries": 25,
+    "fifties": 33,
+    "catches": 60,
+    "wickets": 315
+  },
+  {
+    "name": "Dimuth Karunaratne",
+    "runs": 7438,
+    "matches": 118,
+    "centuries": 33,
+    "fifties": 100,
+    "catches": 64,
+    "wickets": 374
+  },
+  {
+    "name": "Pathum Nissanka",
+    "runs": 12187,
+    "matches": 174,
+    "centuries": 16,
+    "fifties": 38,
+    "catches": 177,
+    "wickets": 339
+  },
+  {
+    "name": "Wanindu Hasaranga",
+    "runs": 3988,
+    "matches": 375,
+    "centuries": 12,
+    "fifties": 55,
+    "catches": 133,
+    "wickets": 343
+  },
+  {
+    "name": "Dasun Shanaka",
+    "runs": 5865,
+    "matches": 488,
+    "centuries": 13,
+    "fifties": 71,
+    "catches": 130,
+    "wickets": 340
+  },
+  {
+    "name": "Chamika Karunaratne",
+    "runs": 12716,
+    "matches": 170,
+    "centuries": 27,
+    "fifties": 72,
+    "catches": 24,
+    "wickets": 325
+  },
+  {
+    "name": "Lahiru Kumara",
+    "runs": 2265,
+    "matches": 118,
+    "centuries": 24,
+    "fifties": 69,
+    "catches": 71,
+    "wickets": 170
+  },
+  {
+    "name": "Niroshan Dickwella",
+    "runs": 11981,
+    "matches": 10,
+    "centuries": 48,
+    "fifties": 44,
+    "catches": 110,
+    "wickets": 52
+  },
+  {
+    "name": "Mustafizur Rahman",
+    "runs": 1324,
+    "matches": 397,
+    "centuries": 26,
+    "fifties": 20,
+    "catches": 37,
+    "wickets": 385
+  },
+  {
+    "name": "Mehidy Hasan",
+    "runs": 11984,
+    "matches": 158,
+    "centuries": 49,
+    "fifties": 90,
+    "catches": 237,
+    "wickets": 63
+  },
+  {
+    "name": "Taskin Ahmed",
+    "runs": 678,
+    "matches": 321,
+    "centuries": 28,
+    "fifties": 79,
+    "catches": 240,
+    "wickets": 399
+  },
+  {
+    "name": "Afif Hossain",
+    "runs": 14225,
+    "matches": 282,
+    "centuries": 26,
+    "fifties": 4,
+    "catches": 232,
+    "wickets": 358
+  },
+  {
+    "name": "Mahedi Hasan",
+    "runs": 619,
+    "matches": 333,
+    "centuries": 36,
+    "fifties": 5,
+    "catches": 116,
+    "wickets": 54
+  },
+  {
+    "name": "Soumya Sarkar",
+    "runs": 3883,
+    "matches": 72,
+    "centuries": 9,
+    "fifties": 19,
+    "catches": 45,
+    "wickets": 173
+  },
+  {
+    "name": "Mohammad Saifuddin",
+    "runs": 5553,
+    "matches": 86,
+    "centuries": 1,
+    "fifties": 92,
+    "catches": 195,
+    "wickets": 206
+  },
+  {
+    "name": "Imam-ul-Haq",
+    "runs": 89,
+    "matches": 406,
+    "centuries": 40,
+    "fifties": 73,
+    "catches": 288,
+    "wickets": 334
+  },
+  {
+    "name": "Haris Rauf",
+    "runs": 3812,
+    "matches": 121,
+    "centuries": 45,
+    "fifties": 76,
+    "catches": 283,
+    "wickets": 305
+  },
+  {
+    "name": "Mohammad Rizwan",
+    "runs": 13581,
+    "matches": 375,
+    "centuries": 1,
+    "fifties": 9,
+    "catches": 238,
+    "wickets": 363
+  }
+]

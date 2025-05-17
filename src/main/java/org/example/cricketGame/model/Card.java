@@ -1,6 +1,7 @@
 package org.example.cricketGame.model;
 
 public class Card {
+    private String name;
     private int runs;
     private int matches;
     private int centuries;
@@ -8,13 +9,22 @@ public class Card {
     private int catches;
     private int wickets;
 
-    public Card(int runs, int matches, int centuries, int fifties, int catches, int wickets) {
+    public Card(String name, int runs, int matches, int centuries, int fifties, int catches, int wickets) {
+        this.name = name;
         this.runs = runs;
         this.matches = matches;
         this.centuries = centuries;
         this.fifties = fifties;
         this.catches = catches;
         this.wickets = wickets;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getRuns() {
@@ -67,7 +77,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return String.format("Card(Runs: %d, Matches: %d, Centuries: %d, 50s: %d, Catches: %d, Wickets: %d)",
-                runs, matches, centuries, fifties, catches, wickets);
+        return String.format("Card(Name: %s,Runs: %d, Matches: %d, Centuries: %d, 50s: %d, Catches: %d, Wickets: %d)",
+                name,runs, matches, centuries, fifties, catches, wickets);
     }
 }

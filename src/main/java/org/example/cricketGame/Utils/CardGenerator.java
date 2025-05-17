@@ -1,5 +1,9 @@
 package org.example.cricketGame.Utils;
 
-public class CardGenerator {
+import org.example.cricketGame.model.Card;
 
+import java.util.List;
+
+public interface CardGenerator {
+     List<Card> generateCards(int numberOfCards);
 }
