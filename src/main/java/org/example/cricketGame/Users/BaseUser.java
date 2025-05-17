@@ -28,10 +28,10 @@ public abstract class BaseUser implements User {
     public boolean isAlive() { return health > 0; }
     public List<Card> getCards() { return cards; }
     public GameMode getGameMode() { return gameMode; }
-    public Card playCard(Attribute attribute) {
-        if (cards.isEmpty()) return null;
-        return cards.remove(0);
-    }
+//    public Card playCard(Attribute attribute) {
+//        if (cards.isEmpty()) return null;
+//        return cards.remove(0);
+//    }
 
 
 }

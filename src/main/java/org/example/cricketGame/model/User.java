@@ -13,5 +13,5 @@ public interface User {
     void reduceHealth(double amount);
     boolean isAlive();
     List<Card> getCards();
-    Card playCard(Attribute attribute);
+//    Card playCard(Attribute attribute);
 }
