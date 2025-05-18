@@ -1,7 +1,6 @@
 package org.example.cricketGame.Game;
 
-import org.example.cricketGame.Users.BaseUser;
-import org.example.cricketGame.model.Attribute;
+import org.example.cricketGame.enums.Attribute;
 
 import java.util.List;
 import java.util.Map;

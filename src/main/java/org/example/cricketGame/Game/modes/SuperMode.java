@@ -1,13 +1,14 @@
-package org.example.cricketGame.Game;
+package org.example.cricketGame.Game.modes;
 
-public class StandardMode implements GameMode{
+// TODO
+public class SuperMode implements GameMode {
     @Override
     public double calculateHealthLossOpponent() {
-        return 10.0;
+        return 0;
     }
 
     @Override
     public double calculateHealthLossPlayer() {
-        return 10.0;
+        return 0;
     }
 }

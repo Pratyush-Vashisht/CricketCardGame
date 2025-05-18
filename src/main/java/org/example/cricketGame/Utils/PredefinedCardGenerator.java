@@ -7,8 +7,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PredefinedCardGenerator implements CardGenerator{
-    public List<Card> LoadCards(){
+public class PredefinedCardGenerator {
+    public static List<Card> LoadCards(){
         List<Card> cards = new ArrayList<>();
         try{
             ObjectMapper objectMapper = new ObjectMapper();
@@ -33,8 +33,7 @@ public class PredefinedCardGenerator implements CardGenerator{
     }
 
 
-    @Override
-    public List<Card> generateCards(int numberOfCards) {
+    public static List<Card> generateCards(int numberOfCards) {
         return LoadCards();
     }
 }

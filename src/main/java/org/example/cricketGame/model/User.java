@@ -1,6 +1,6 @@
 package org.example.cricketGame.model;
 
-import org.example.cricketGame.Game.GameMode;
+import org.example.cricketGame.Game.modes.GameMode;
 
 import java.util.List;
 import java.util.UUID;
