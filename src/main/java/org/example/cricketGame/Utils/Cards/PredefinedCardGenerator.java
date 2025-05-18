@@ -6,6 +6,7 @@ import org.example.cricketGame.model.Card;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PredefinedCardGenerator {
@@ -35,6 +36,8 @@ public class PredefinedCardGenerator {
 
 
     public static List<Card> generateCards(int numberOfCards) {
-        return LoadCards();
+        List<Card> cards = LoadCards();
+        Collections.shuffle(cards);
+        return cards.subList(0, numberOfCards);
     }
 }

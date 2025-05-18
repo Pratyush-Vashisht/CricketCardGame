@@ -42,9 +42,8 @@ public class Main {
         // Initialize and start game
         GameSimulation gameSimulation = new GameSimulation();
         int cardsPerPlayer = inputProvider.getIntInput("Enter number of cards per player: ");
-        int totalCards = numUsers * cardsPerPlayer;
 
-        gameSimulation.initGame(numUsers, totalCards, userDetails);
+        gameSimulation.initGame(numUsers, cardsPerPlayer, userDetails);
         gameSimulation.startGame();
         // Close input provider
         if (inputProvider instanceof ConsoleInputProvider) {
@@ -52,3 +51,31 @@ public class Main {
         }
     }
 }
+
+/**
+ * public class Main {
+ *     public static void main(String[] args) {
+ *         System.out.println("Please Enter no of users!");
+ *         // TODO take input for no of users
+ *         System.out.println("Please Enter User name and game mode!");
+ *         System.out.println("Please enter Game Modes as");
+ *         List<GameModeEnum> gameModes = List.of(GameModeEnum.values());
+ *         for (int i = 0; i < gameModes.size(); i++) {
+ *             System.out.println(i + " for game mode " + gameModes.get(i).name());
+ *         }
+ *
+ *         List<Pair<String, GameModeEnum>> userDetails = new ArrayList<>();
+ *         userDetails.add(Pair.with("Nikhil", GameModeEnum.SUPER_MODE));
+ *         userDetails.add(Pair.with("Pratyush", GameModeEnum.FREE_HIT));
+ *         // TODO take input for user name and game mode
+ *         // create user
+ *
+ *
+ *         // create loo
+ *
+ *         GameSimulation gameSimulation = new GameSimulation();
+ *         gameSimulation.initGame(4,NO_OF_CARDS_PER_USER, userDetails);
+ *         gameSimulation.startGame();
+ *     }
+ * }
+ */

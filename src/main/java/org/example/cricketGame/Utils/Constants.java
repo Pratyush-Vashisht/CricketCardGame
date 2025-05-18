@@ -27,8 +27,8 @@ public class Constants {
 
 
     // Game Inputs
-    public static final int MAX_USERS = 4;
-    public static final int MAX_PLAYER_CARDS = 100;
+    public static final int MAX_USERS = 2;
+//    public static final int MAX_PLAYER_CARDS = 100;
     public static final String CARD_JSON_PATH = "src/main/resources/cards.json";
     public static final double DEFAULT_USER_HEALTH = 100.0;
 

@@ -1,5 +1,9 @@
 package org.example.cricketGame.model;
 
+import lombok.Data;
+
+// TODO Implementation should use interfaces or abstract classes to enable attribute extension
+@Data
 public class Card {
     private String name;
     private int runs;
@@ -19,65 +23,9 @@ public class Card {
         this.wickets = wickets;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getRuns() {
-        return runs;
-    }
-
-    public void setRuns(int runs) {
-        this.runs = runs;
-    }
-
-    public int getMatches() {
-        return matches;
-    }
-
-    public void setMatches(int matches) {
-        this.matches = matches;
-    }
-
-    public int getCenturies() {
-        return centuries;
-    }
-
-    public void setCenturies(int centuries) {
-        this.centuries = centuries;
-    }
-
-    public int getFifties() {
-        return fifties;
-    }
-
-    public void setFifties(int fifties) {
-        this.fifties = fifties;
-    }
-
-    public int getCatches() {
-        return catches;
-    }
-
-    public void setCatches(int catches) {
-        this.catches = catches;
-    }
-
-    public int getWickets() {
-        return wickets;
-    }
-
-    public void setWickets(int wickets) {
-        this.wickets = wickets;
-    }
-
     @Override
     public String toString() {
-        return String.format("Card(Name: %s,Runs: %d, Matches: %d, Centuries: %d, 50s: %d, Catches: %d, Wickets: %d)",
-                name,runs, matches, centuries, fifties, catches, wickets);
+        return String.format("Player: %s, \tRuns: %d, \tMatches: %d, \tCenturies: %d, \t50s: %d, \tCatches: %d, \tWickets: %d\n",
+                name, runs, matches, centuries, fifties, catches, wickets);
     }
 }

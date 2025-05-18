@@ -2,15 +2,18 @@ package org.example.cricketGame.Game.modes;
 
 import org.example.cricketGame.enums.GameModeEnum;
 
-import java.util.Arrays;
-import java.util.List;
+public abstract class GameMode {
+    private boolean isGameModeActive = true;
 
-public interface GameMode {
-    static GameModeEnum getRandomGameMode() {
-        List<GameModeEnum> list = Arrays.asList(GameModeEnum.values())    ;
-        int randomIndex = (int) (Math.random() * list.size());
-        return list.get(randomIndex);
+    public abstract double calculateHealthLossOpponent();
+    public abstract double calculateHealthLossPlayer();
+    public abstract GameModeEnum getGameModeEnum();
+
+    public boolean isGameModeActive() {
+        return isGameModeActive;
     }
-    double calculateHealthLossOpponent();
-    double calculateHealthLossPlayer();
+
+    public void deactivateGameMode() {
+        isGameModeActive = false;
+    }
 }
