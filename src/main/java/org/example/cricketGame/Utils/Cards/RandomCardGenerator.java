@@ -1,11 +1,11 @@
-package org.example.cricketGame.Utils;
+package org.example.cricketGame.Utils.Cards;
 
 import org.example.cricketGame.model.Card;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RandomCardGenerator implements CardGenerator{
+public class RandomCardGenerator implements CardGenerator {
 
 
     public List<Card> generateRandomCards(int numberOfCards) {

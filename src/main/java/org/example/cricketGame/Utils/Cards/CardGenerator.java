@@ -1,4 +1,4 @@
-package org.example.cricketGame.Utils;
+package org.example.cricketGame.Utils.Cards;
 
 import org.example.cricketGame.model.Card;
 

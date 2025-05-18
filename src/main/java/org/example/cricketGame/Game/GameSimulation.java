@@ -1,9 +1,10 @@
 package org.example.cricketGame.Game;
 
+import org.example.cricketGame.Game.modes.GameMode;
 import org.example.cricketGame.Users.BaseUser;
 import org.example.cricketGame.Users.BotUser;
 import org.example.cricketGame.Users.HumanUser;
-import org.example.cricketGame.Utils.PredefinedCardGenerator;
+import org.example.cricketGame.Utils.Cards.PredefinedCardGenerator;
 import org.example.cricketGame.Utils.Constants;
 import org.example.cricketGame.enums.GameModeEnum;
 import org.example.cricketGame.model.Card;
@@ -51,6 +52,12 @@ public class GameSimulation implements GameProgress{
 
     private List<Pair<String, GameModeEnum>> getBotUserData(int noOfBotUsers) {
         List<Pair<String, GameModeEnum>> botDetails = new ArrayList<>();
+        for(int i = 0;i < noOfBotUsers;i++){
+            String botName = "Bot" + (i+1);
+            GameModeEnum gameMode = GameMode.getRandomGameMode();
+            botDetails.add(Pair.with(botName, gameMode));
+            System.out.println("Bot Name: " + botName + ", Game Mode: " + gameMode);
+        }
         return botDetails;
     }
 

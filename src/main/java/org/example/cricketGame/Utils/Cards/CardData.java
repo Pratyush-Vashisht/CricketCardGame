@@ -1,4 +1,4 @@
-package org.example.cricketGame.Utils;
+package org.example.cricketGame.Utils.Cards;
 
 
 public class CardData {
