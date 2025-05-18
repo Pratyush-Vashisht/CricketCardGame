@@ -27,7 +27,6 @@ public class GameSimulation implements GameProgress{
         List<BaseUser> users = getUsersData(numberOfUsers, userDetails);
 
         game = new Game(cards, users);
-
     }
 
     private List<BaseUser> getUsersData(int numberOfUsers, List<Pair<String, GameModeEnum>> userDetails) {
