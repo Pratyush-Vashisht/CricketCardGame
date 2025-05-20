@@ -6,8 +6,11 @@ import org.example.cricketGame.Users.HumanUser;
 import org.example.cricketGame.Utils.Cards.PredefinedCardGenerator;
 import org.example.cricketGame.Utils.Checker;
 import org.example.cricketGame.Utils.Constants;
+import org.example.cricketGame.Utils.input.InputProvider;
 import org.example.cricketGame.enums.Attribute;
 import org.example.cricketGame.enums.GameModeEnum;
+import org.example.cricketGame.model.Attributes.AttributeFactory;
+import org.example.cricketGame.model.Attributes.AttributeStrategy;
 import org.example.cricketGame.model.Card;
 import org.javatuples.Pair;
 
@@ -17,9 +20,12 @@ import java.util.stream.Collectors;
 public class GameSimulation implements GameProgress {
 
     private Game game;
+    private final InputProvider inputProvider;
 ////    @Override
 /// /    public void startGame()
-
+    public GameSimulation(InputProvider inputProvider) {
+        this.inputProvider = inputProvider;
+    }
     public void initGame(int numberOfUsers, int numberOfCardsPerPlayer, List<Pair<String, GameModeEnum>> userDetails) {
 
         // take CARD_DECK_SIZE from main list and set in Game
@@ -96,7 +102,6 @@ public class GameSimulation implements GameProgress {
         Map<UUID, BaseUser> userMap = game.getUsers().stream()
                 .collect(Collectors.toMap(BaseUser::getId, user -> user));
 
-        Scanner scanner = new Scanner(System.in);
 
         int roundNumber = 1;
         int maxRounds = game.getNumberOfRounds();
@@ -105,7 +110,7 @@ public class GameSimulation implements GameProgress {
             printLog("Round - " + roundNumber + " begin");
 
 
-            Round round = prepareRound(userMap, scanner, userQueue, roundNumber, maxRounds);
+            Round round = prepareRound(userMap, userQueue, roundNumber, maxRounds);
             game.getRounds().add(round);
 
 //            checkRound(round, userQueue)
@@ -126,15 +131,18 @@ public class GameSimulation implements GameProgress {
         }
     }
 
-    private Round prepareRound(Map<UUID, BaseUser> userMap, Scanner scanner, Queue<UUID> userQueue,int roundNumber, int MaxRounds) {
+    private Round prepareRound(Map<UUID, BaseUser> userMap, Queue<UUID> userQueue, int roundNumber, int MaxRounds) {
         UUID currentUserId = userQueue.poll(); // remove top user
         BaseUser currentUser = userMap.get(currentUserId);
+
         printLog("Hey - " + currentUser.getName() + ", It's your turn.");
-        printLog("Your current Cards - " + currentUser.getCards().values().stream().filter(card-> card.isActive()).collect(Collectors.toList()));
+        printLog("Your current Cards - " + currentUser.getCards().values().stream()
+                .filter(Card::isActive)
+                .collect(Collectors.toList()));
+
         Card selectedCard = null;
         while (true) {
-            System.out.print("Enter the name of the player/card: ");
-            String playerName = scanner.nextLine();
+            String playerName = inputProvider.getStringInput("Enter the name of the player/card: ");
             selectedCard = currentUser.getCardByPlayerName(playerName);
             if (selectedCard == null) {
                 System.out.println("Invalid card name. Please try again.");
@@ -144,36 +152,40 @@ public class GameSimulation implements GameProgress {
                 break; // valid and active card found
             }
         }
-        printLog("Please input attribute type - " + Arrays.toString(Attribute.values()));
-        String attributeType1 = scanner.nextLine();
+
+        String attributeType1 = inputProvider.getStringInput("Please input attribute type - " + AttributeFactory.getAllAttributeNames() + ": ");
         String attributeType2 = null;
+
         GameModeEnum currentUserGameMode = GameModeEnum.STANDARD;
-        if (currentUser.getGameMode().getGameModeEnum() != GameModeEnum.STANDARD && currentUser.getGameMode().isGameModeActive()) {
+
+        if (currentUser.getGameMode().getGameModeEnum() != GameModeEnum.STANDARD &&
+                currentUser.getGameMode().isGameModeActive()) {
+
             printLog("You have a special Game Mode Left - " + currentUser.getGameMode().getGameModeEnum());
-            printLog("Would you like to use - y/n ");
-            if(currentUser.getGameMode().getGameModeEnum() == GameModeEnum.SUPER_MODE && roundNumber != MaxRounds) {
+            String useGameMode = inputProvider.getStringInput("Would you like to use - y/n: ");
+            if (currentUser.getGameMode().getGameModeEnum() == GameModeEnum.SUPER_MODE && roundNumber != MaxRounds) {
                 printLog(currentUser.getGameMode().getGameModeEnum() + " cannot activate till last card");
-            }
-            else if(currentUser.getGameMode().getGameModeEnum() == GameModeEnum.POWER_PLAY){
-                printLog("Select Another Attribute - " + Arrays.toString(Attribute.values()));
-                attributeType2 = scanner.nextLine();
-            }
-            else{
-
-                String useGameMode = scanner.nextLine();
-
+            } else if (currentUser.getGameMode().getGameModeEnum() == GameModeEnum.POWER_PLAY) {
+                attributeType2 = inputProvider.getStringInput("Select Another Attribute - " + AttributeFactory.getAllAttributeNames() + ": ");
+            } else {
                 if (useGameMode != null && useGameMode.equalsIgnoreCase("y")) {
                     currentUser.getGameMode().deactivateGameMode();
                     currentUserGameMode = currentUser.getGameMode().getGameModeEnum();
                 }
             }
-
         }
 
-        Round round = new Round(currentUserId,
-                Attribute.getAttributeByName(attributeType1),
+        // Convert attribute type Strings into strategies using factory
+        AttributeStrategy primaryAttribute = AttributeFactory.getAttribute(Attribute.getAttributeByName(attributeType1));
+        AttributeStrategy secondaryAttribute = attributeType2 != null ? AttributeFactory.getAttribute(Attribute.getAttributeByName(attributeType2)) : null;
+
+        Round round = new Round(
+                currentUserId,
+                primaryAttribute,
+                secondaryAttribute,
                 currentUserGameMode,
-                selectedCard); // TODO update active user list by queue
+                selectedCard);
+
         round.getHealthBefore().put(currentUser.getId(), currentUser.getHealth());
 
         // Other player input processing
@@ -182,9 +194,10 @@ public class GameSimulation implements GameProgress {
             UUID opponentUserId = userQueue.poll();
             BaseUser opponentUser = userMap.get(opponentUserId);
             printLog("Hey - " + opponentUser.getName());
-            printLog("Please input your player name");
-            printLog("Your current Cards - " + opponentUser.getCards().values().stream().filter(card-> card.isActive()).collect(Collectors.toList()));
-            String opponentPlayerName = scanner.nextLine();
+            printLog("Your current Cards - " + opponentUser.getCards().values().stream()
+                    .filter(Card::isActive)
+                    .collect(Collectors.toList()));
+            String opponentPlayerName = inputProvider.getStringInput("Please input your player name: ");
 
             round.getHealthBefore().put(opponentUser.getId(), opponentUser.getHealth());
             round.getAllUserCardMap().put(opponentUserId, opponentUser.getCardByPlayerName(opponentPlayerName));
@@ -197,6 +210,7 @@ public class GameSimulation implements GameProgress {
 
         return round;
     }
+
 
     private void declareWinner(Queue<UUID> userQueue,Map<UUID, BaseUser> userMap) {
         double mx_health = 0;

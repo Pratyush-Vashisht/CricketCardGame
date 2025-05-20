@@ -5,6 +5,7 @@ import org.example.cricketGame.Users.BaseUser;
 import org.example.cricketGame.Utils.Constants;
 import org.example.cricketGame.enums.Attribute;
 import org.example.cricketGame.enums.GameModeEnum;
+import org.example.cricketGame.model.Attributes.AttributeStrategy;
 import org.example.cricketGame.model.Card;
 
 import java.util.*;
@@ -29,7 +30,7 @@ public class FreeHitMode extends GameMode {
 
     @Override
     public void applyHealthStrategy(Round round, Map<UUID, BaseUser> userMap, Queue<UUID> userQueue) {
-        Attribute attribute = round.getPrimaryAttribute();
+        AttributeStrategy attribute = round.getPrimaryAttributeStrategy();
         UUID roundInitiatorId = round.getInitiatingUserId();
         BaseUser initiatingUser = userMap.get(round.getInitiatingUserId());
         initiatingUser.getGameMode().deactivateGameMode();
@@ -44,7 +45,7 @@ public class FreeHitMode extends GameMode {
         // Sorting not required as we are only interested in the winner
 
         // Find the winner by getting the max value of the attribute
-        UUID winnerId = cardEntries.stream().max(Comparator.comparingInt(entry -> entry.getValue().getAttributeValue(attribute))).get().getKey();
+        UUID winnerId = cardEntries.stream().max(Comparator.comparingInt(entry -> (attribute.getValue(entry.getValue())))).get().getKey();
 
         for (Map.Entry<UUID, Card> entry : cardEntries) {
             UUID userId = entry.getKey();

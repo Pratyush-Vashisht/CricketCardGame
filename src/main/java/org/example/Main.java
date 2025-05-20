@@ -40,7 +40,8 @@ public class Main {
         }
 
         // Initialize and start game
-        GameSimulation gameSimulation = new GameSimulation();
+
+        GameSimulation gameSimulation = new GameSimulation(new ConsoleInputProvider());
         int cardsPerPlayer = inputProvider.getIntInput("Enter number of cards per player: ");
 
         gameSimulation.initGame(numUsers, cardsPerPlayer, userDetails);

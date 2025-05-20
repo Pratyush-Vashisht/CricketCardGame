@@ -4,6 +4,7 @@ import org.example.cricketGame.Game.Round;
 import org.example.cricketGame.Users.BaseUser;
 import org.example.cricketGame.enums.Attribute;
 import org.example.cricketGame.enums.GameModeEnum;
+import org.example.cricketGame.model.Attributes.AttributeStrategy;
 import org.example.cricketGame.model.Card;
 
 import java.util.*;
@@ -27,7 +28,7 @@ public class WorldCupMode extends GameMode {
 
     @Override
     public void applyHealthStrategy(Round round, Map<UUID, BaseUser> userMap, Queue<UUID> userQueue) {
-        Attribute attribute = round.getPrimaryAttribute();
+        AttributeStrategy attribute = round.getPrimaryAttributeStrategy();
         BaseUser initiatingUser = userMap.get(round.getInitiatingUserId());
         initiatingUser.getGameMode().deactivateGameMode();
         round.getAllUserCardMap().put(round.getInitiatingUserId(), round.getInitiatingUserCard());
@@ -36,8 +37,7 @@ public class WorldCupMode extends GameMode {
         List<Map.Entry<UUID, Card>> cardEntries = new ArrayList<>(round.getAllUserCardMap().entrySet());
 
 
-
-        UUID winnerId = cardEntries.stream().max(Comparator.comparingInt(entry -> entry.getValue().getAttributeValue(attribute))).get().getKey();
+        UUID winnerId = cardEntries.stream().max(Comparator.comparingInt(entry -> (attribute.getValue(entry.getValue())))).get().getKey();
         BaseUser winner = userMap.get(winnerId);
 
         boolean isFinalCard = winner.getCards().size() == 1;

@@ -5,6 +5,8 @@ import org.example.cricketGame.Users.BaseUser;
 import org.example.cricketGame.Utils.Constants;
 import org.example.cricketGame.enums.Attribute;
 import org.example.cricketGame.enums.GameModeEnum;
+import org.example.cricketGame.model.Attributes.AttributeFactory;
+import org.example.cricketGame.model.Attributes.AttributeStrategy;
 import org.example.cricketGame.model.Card;
 
 import java.util.*;
@@ -28,27 +30,30 @@ public class SuperMode extends GameMode {
 
     @Override
     public void applyHealthStrategy(Round round, Map<UUID, BaseUser> userMap, Queue<UUID> userQueue) {
-        Attribute attribute = round.getPrimaryAttribute();
+        AttributeStrategy attribute = round.getPrimaryAttributeStrategy();
         BaseUser initiatingUser = userMap.get(round.getInitiatingUserId());
         initiatingUser.getGameMode().deactivateGameMode();
         List<Map.Entry<UUID, Card>> cardEntries = new ArrayList<>(round.getAllUserCardMap().entrySet());
 
-        UUID winnerId = cardEntries.stream().max(Comparator.comparingInt(entry -> entry.getValue().getAttributeValue(attribute))).get().getKey();
+        UUID winnerId = cardEntries.stream().max(Comparator.comparingInt(entry -> (attribute.getValue(entry.getValue())))).get().getKey();
         BaseUser winner = userMap.get(winnerId);
 
+        AttributeStrategy runsStrategy = AttributeFactory.getAttribute(Attribute.RUNS);
+        AttributeStrategy wicketsStrategy = AttributeFactory.getAttribute(Attribute.WICKETS);
+
         boolean hasHighestRuns = winner.getCards().values().stream()
-                .max(Comparator.comparingInt(card -> card.getAttributeValue(Attribute.RUNS)))
-                .map(card -> card.getAttributeValue(Attribute.RUNS))
+                .max(Comparator.comparingInt(runsStrategy::getValue))
+                .map(runsStrategy::getValue)
                 .orElse(0) >=
                 userMap.values().stream().flatMap(u -> u.getCards().values().stream())
-                        .mapToInt(c -> c.getAttributeValue(Attribute.RUNS)).max().orElse(0);
+                        .mapToInt(runsStrategy::getValue).max().orElse(0);
 
         boolean hasHighestWickets = winner.getCards().values().stream()
-                .max(Comparator.comparingInt(card -> card.getAttributeValue(Attribute.WICKETS)))
-                .map(card -> card.getAttributeValue(Attribute.WICKETS))
+                .max(Comparator.comparingInt(wicketsStrategy::getValue))
+                .map(wicketsStrategy::getValue)
                 .orElse(0) >=
                 userMap.values().stream().flatMap(u -> u.getCards().values().stream())
-                        .mapToInt(c -> c.getAttributeValue(Attribute.WICKETS)).max().orElse(0);
+                        .mapToInt(wicketsStrategy::getValue).max().orElse(0);
 
         boolean qualifies = hasHighestRuns && hasHighestWickets;
 

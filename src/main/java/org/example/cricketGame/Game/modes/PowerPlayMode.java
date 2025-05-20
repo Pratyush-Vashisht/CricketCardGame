@@ -5,6 +5,7 @@ import org.example.cricketGame.Users.BaseUser;
 import org.example.cricketGame.Utils.Constants;
 import org.example.cricketGame.enums.Attribute;
 import org.example.cricketGame.enums.GameModeEnum;
+import org.example.cricketGame.model.Attributes.AttributeStrategy;
 import org.example.cricketGame.model.Card;
 
 import java.util.*;
@@ -29,15 +30,15 @@ public class PowerPlayMode extends GameMode {
 
     @Override
     public void applyHealthStrategy(Round round, Map<UUID, BaseUser> userMap, Queue<UUID> userQueue) {
-        Attribute attr1 = round.getPrimaryAttribute();
-        Attribute attr2 = round.getSecondaryAttribute();
+        AttributeStrategy attr1 = round.getPrimaryAttributeStrategy();
+        AttributeStrategy attr2 = round.getSecondaryAttributeStrategy();
         UUID roundInitiatingUserId = round.getInitiatingUserId();
         BaseUser initiatingUser = userMap.get(round.getInitiatingUserId());
         initiatingUser.getGameMode().deactivateGameMode();
 
         List<Map.Entry<UUID, Card>> cardEntries = new ArrayList<>(round.getAllUserCardMap().entrySet());
-        UUID winnerFirstAttributeId = cardEntries.stream().max(Comparator.comparingInt(entry -> entry.getValue().getAttributeValue(attr1))).get().getKey();
-        UUID winnerSecondAttributeId = cardEntries.stream().max(Comparator.comparingInt(entry -> entry.getValue().getAttributeValue(attr2))).get().getKey();
+        UUID winnerFirstAttributeId = cardEntries.stream().max(Comparator.comparingInt(entry -> (attr1.getValue(entry.getValue())))).get().getKey();
+        UUID winnerSecondAttributeId = cardEntries.stream().max(Comparator.comparingInt(entry -> (attr2.getValue(entry.getValue())))).get().getKey();
         UUID winnerId =( roundInitiatingUserId.equals(winnerFirstAttributeId) || roundInitiatingUserId.equals(winnerSecondAttributeId)) ? roundInitiatingUserId : winnerFirstAttributeId;
 
 
