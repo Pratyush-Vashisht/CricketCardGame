@@ -17,8 +17,7 @@ public class Constants {
     public static final double POWER_PLAY_OPPONENT_DAMAGE = 12.5;
 
     // Super Mode
-    public static final double SUPER_MODE_PLAYER_DAMAGE = 15.0;
-    public static final double SUPER_MODE_OPPONENT_DAMAGE = 12.5;
+    public static final double SUPER_MODE_TRUE_DAMAGE = 25.0;
 
     // World Cup Mode
     public static final double WORLD_CUP_PLAYER_DAMAGE = 20.0;
